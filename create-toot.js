@@ -4,11 +4,14 @@
 
 const dotenv = require("dotenv");
 const { login } = require("masto");
-
-const bent = require("bent");
-const getBuffer = bent("buffer");
+const path = require("node:path");
+const fs = require("fs");
+const crypto = require("crypto");
+const download = require("./download.js");
 
 dotenv.config();
+
+const TEMPORARY_FILE_DIR = "/tmp/";
 
 const JSON_FEED_ITEM = {
   id: "https://nicolas-hoizey.com/notes/2022/11/26/1/",
@@ -25,6 +28,11 @@ const JSON_FEED_ITEM = {
       title:
         'A screenshot of a toot where the application used to publish is "nicolas-hoizey.com"',
     },
+    {
+      url: "https://image.thum.io/get/width/1200/crop/800/noanimate/https://mxb.dev/blog/the-indieweb-for-everyone/",
+      mime_type: "image/png",
+      title: "Screenshot of The IndieWeb for Everyone",
+    },
   ],
 };
 
@@ -35,30 +43,32 @@ const main = async () => {
   });
 
   try {
-    let toot;
-
     let uploadedImages = await Promise.all(
       JSON_FEED_ITEM.attachments.map(async (attachment) => {
-        let imageBuffer;
-        let imageData;
-        try {
-          console.log(`Upload ${attachment.url}`);
-          imageBuffer = await getBuffer(attachment.url);
-          imageData = await imageBuffer.toString("base64");
-        } catch (error) {
-          console.dir(error);
-        }
-
         let media;
+        let imageFile = path.join(
+          TEMPORARY_FILE_DIR,
+          `image-${crypto.randomUUID()}`
+        );
         try {
-          media = await MastodonClient.mediaAttachments.create({
-            file: imageData,
-            description: attachment.title,
-          });
-          console.log(`Uploaded with ID ${media.id}`);
-          return media.id;
-        } catch (error) {
-          console.log(error);
+          await download(attachment.url, imageFile);
+          // console.log("Download done");
+          try {
+            media = await MastodonClient.mediaAttachments.create({
+              file: fs.createReadStream(imageFile),
+              description: attachment.title,
+            });
+            console.log(`Uploaded with ID ${media.id}`);
+            await fs.unlink(imageFile, () => {
+              // console.log(`${imageFile} deleted.`);
+            });
+            return media.id;
+          } catch (error) {
+            console.log(error);
+          }
+        } catch (e) {
+          // console.log("Download failed");
+          console.log(e.message);
         }
       })
     );
@@ -66,7 +76,7 @@ const main = async () => {
 
     // Post the toot with the uploaded image(s)
     console.log(`Post message: ${JSON_FEED_ITEM.title}`);
-    toot = await MastodonClient.statuses.create({
+    let toot = await MastodonClient.statuses.create({
       status: JSON_FEED_ITEM.content_text,
       visibility: "public",
       mediaIds: uploadedImages,
