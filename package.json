@@ -1,0 +1,25 @@
+{
+  "name": "mastodon-api-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "create-toot.js",
+  "scripts": {
+    "start": "node ./create-toot.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nhoizey/mastodon-api-tests.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nhoizey/mastodon-api-tests/issues"
+  },
+  "homepage": "https://github.com/nhoizey/mastodon-api-tests#readme",
+  "dependencies": {
+    "bent": "^7.3.12",
+    "dotenv": "^16.0.3",
+    "masto": "^4.6.9"
+  }
+}
