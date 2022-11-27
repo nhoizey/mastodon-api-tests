@@ -2,16 +2,22 @@
 // MASTODON_INSTANCE: the root URL of the Mastodon instance you're using
 // MASTODON_ACCESS_TOKEN: your access token, get it from /settings/applications/new
 
-const dotenv = require("dotenv");
-const { login } = require("masto");
+// Native Node modules
 const path = require("node:path");
 const fs = require("fs");
+const os = require("os");
 const crypto = require("crypto");
+
+// Third party dependencies
+const dotenv = require("dotenv");
+const { login } = require("masto");
+
+// Local dependencies
 const download = require("./download.js");
 
 dotenv.config();
 
-const TEMPORARY_FILE_DIR = "/tmp/";
+const TEMPORARY_FILE_DIR = os.tmpdir() || "/tmp/";
 
 const JSON_FEED_ITEM = {
   id: "https://nicolas-hoizey.com/notes/2022/11/26/1/",
