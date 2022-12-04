@@ -27,7 +27,6 @@ jobs:
         env:
           MASTODON_ACCESS_TOKEN: ${{ secrets.MASTODON_ACCESS_TOKEN }}
           MASTODON_INSTANCE: ${{ secrets.MASTODON_INSTANCE }}
-          MASTODON_ID: ${{ secrets.MASTODON_ID }}
           RUNNER_TEMPORARY_DIRECTORY: ${{ runner.temp }}
         id: vars
         run: npm run posse-mastodon
