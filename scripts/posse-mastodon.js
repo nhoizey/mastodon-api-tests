@@ -104,7 +104,6 @@ const main = async () => {
               );
               try {
                 await download(attachment.url, imageFile);
-                // console.log("Download done");
                 try {
                   media = await MastodonClient.mediaAttachments.create({
                     file: fs.createReadStream(imageFile),
@@ -119,15 +118,12 @@ const main = async () => {
                   console.log(error);
                 }
               } catch (e) {
-                // console.log("Download failed");
                 console.log(e.message);
               }
             })
           );
-          // console.dir(uploadedImages);
 
           // Post the toot with the uploaded image(s)
-          console.log(`[DEBUG] Post message: ${item.title}`);
           toot = await MastodonClient.statuses.create({
             status: statusText,
             visibility: "public",
