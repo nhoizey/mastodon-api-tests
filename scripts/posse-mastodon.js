@@ -188,7 +188,7 @@ const main = async () => {
     })
   );
   if (cacheUpdated) {
-    fs.writeFileSync(CACHE_FILE, JSON.stringify(cache), {
+    fs.writeFileSync(CACHE_FILE, JSON.stringify(cache, null, 2), {
       encoding: "utf8",
     });
   }
