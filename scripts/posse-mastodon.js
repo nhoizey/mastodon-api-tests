@@ -84,6 +84,10 @@ const main = async () => {
     try {
       // TODO: shorten the status text if it's too long, or let the API call fail (current behavior)
       let statusText = item.content_text;
+      // Safeguard for test platform
+      if (MASTODON_INSTANCE.match("mastodon.hsablonniere.com")) {
+        statusText = statusText.replaceAll("@", "%");
+      }
       let toot;
 
       console.log(`Posting toot "${item.title}"`);
@@ -132,7 +136,6 @@ const main = async () => {
           });
         } else {
           // There's no image afterall, simple text toot
-          console.log(`[DEBUG] Post message: ${item.title}`);
           toot = await MastodonClient.statuses.create({
             status: statusText,
             visibility: "public",
@@ -141,7 +144,6 @@ const main = async () => {
         }
       } else {
         // Simple text toot
-        console.log(`[DEBUG] Post message: ${item.title}`);
         toot = await MastodonClient.statuses.create({
           status: statusText,
           visibility: "public",
