@@ -21,8 +21,8 @@ const { login } = require("masto");
 const download = require("../lib/download.js");
 
 // Cache of toots already sent
-const CACHE_FILE = "../cache/posse-mastodon.json";
-const cache = require(CACHE_FILE);
+const CACHE_FILE = "cache/posse-mastodon.json";
+const cache = require(path.join("..", CACHE_FILE));
 let cacheUpdated = false;
 
 dotenv.config();
