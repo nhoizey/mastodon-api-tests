@@ -31,8 +31,6 @@ const DAYS = 10;
 const TEMPORARY_DIRECTORY =
   process.env.RUNNER_TEMPORARY_DIRECTORY || os.tmpdir();
 
-console.log(`Temporary directory: ${TEMPORARY_DIRECTORY}`);
-
 const main = async () => {
   // Helper Function to return unknown errors
   const handleError = (error) => {
@@ -85,7 +83,7 @@ const main = async () => {
       // TODO: shorten the status text if it's too long, or let the API call fail (current behavior)
       let statusText = item.content_text;
       // Safeguard for test platform
-      if (MASTODON_INSTANCE.match("mastodon.hsablonniere.com")) {
+      if (process.env.MASTODON_INSTANCE.match("mastodon.hsablonniere.com")) {
         statusText = statusText.replaceAll("@", "%");
       }
       let toot;
