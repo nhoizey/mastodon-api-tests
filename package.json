@@ -4,7 +4,8 @@
   "description": "",
   "main": "create-toot.js",
   "scripts": {
-    "start": "node ./create-toot.js"
+    "start": "node ./create-toot.js",
+    "posse-mastodon": "node ./scripts/posse-mastodon.js"
   },
   "repository": {
     "type": "git",
@@ -19,6 +20,8 @@
   "homepage": "https://github.com/nhoizey/mastodon-api-tests#readme",
   "dependencies": {
     "dotenv": "^16.0.3",
-    "masto": "^4.6.9"
+    "masto": "^4.6.9",
+    "moment": "^2.29.1",
+    "node-fetch": "^2.6.7"
   }
 }
