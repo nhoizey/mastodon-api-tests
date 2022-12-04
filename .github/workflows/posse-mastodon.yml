@@ -32,8 +32,12 @@ jobs:
         id: vars
         run: npm run posse-mastodon
 
+      - name: Pull any changes 📥
+        run: git pull
+
       - name: Commit and push 📤
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "chore(cache): update Mastodon cache file (automated)"
           file_pattern: "cache/*.json"
+          skip_fetch: false
