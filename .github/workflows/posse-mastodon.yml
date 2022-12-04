@@ -2,10 +2,8 @@ name: POSSE to Mastodon
 on:
   schedule:
     # At every 7th minute from 1 through 59 past every hour
-    # from 8 through 22
-    # on every day-of-week
-    # 1/7 8-22 * * *
-    - cron: "1/3 8-22 * * *"
+    # https://crontab.guru/#1/07_*_*_*_*
+    - cron: "1/07 * * * *"
   workflow_dispatch:
 
 jobs:
