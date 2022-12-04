@@ -39,7 +39,3 @@ jobs:
         with:
           commit_message: "chore(cache): update Mastodon cache file (automated)"
           file_pattern: "cache/*.json"
-
-      - name: Was Mastodon cache updated?
-        if: steps.auto-commit-action.outputs.changes_detected == 'true'
-        run: echo "Mastodon cache updated"
