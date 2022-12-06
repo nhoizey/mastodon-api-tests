@@ -52,11 +52,14 @@ const main = async () => {
 
     // Fill cache with new items
     items.forEach((item, index) => {
-      if (!jsonCache.hasOwnProperty(item.url)) {
+      if (jsonCache.hasOwnProperty(item.url)) {
+        const existingToots = [...jsonCache[item.url].toots];
+        jsonCache[item.url] = item;
+        jsonCache[item.url].toots = existingToots;
+      } else {
         // This is a new photo
         jsonCache[item.url] = item;
         jsonCache[item.url].toots = [];
-        cacheUpdated = true;
       }
     });
 
@@ -86,7 +89,6 @@ const main = async () => {
 
       jsonCache[item.url].toots.push(tootUrl);
       jsonTimestamp.timestamp = Date.now();
-      cacheUpdated = true;
     } catch (error) {
       return handleError(error);
     }
@@ -104,15 +106,15 @@ const main = async () => {
       }
     )
   );
-  if (cacheUpdated) {
-    console.log("UPDATED!!!!!");
-    fs.writeFileSync(CACHE_FILE, JSON.stringify(jsonCache, null, 2), {
-      encoding: "utf8",
-    });
-    fs.writeFileSync(TIMESTAMP_FILE, JSON.stringify(jsonTimestamp, null, 2), {
-      encoding: "utf8",
-    });
-  }
+
+  console.log("UPDATE CACHE!!!!!");
+  fs.writeFileSync(CACHE_FILE, JSON.stringify(jsonCache, null, 2), {
+    encoding: "utf8",
+  });
+  fs.writeFileSync(TIMESTAMP_FILE, JSON.stringify(jsonTimestamp, null, 2), {
+    encoding: "utf8",
+  });
+
   // TODO: parse `result` to find potential errors and return accordingly
   // TODO: no need to return
   return { statusCode: 200, body: JSON.stringify(result) };
