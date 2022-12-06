@@ -83,7 +83,7 @@ const main = async () => {
     const photoToPosse =
       candidates[Math.floor(Math.random() * candidates.length)];
     try {
-      // return createToot(photoToPosse);
+      return createToot(photoToPosse);
     } catch (error) {
       return handleError(error);
     }
