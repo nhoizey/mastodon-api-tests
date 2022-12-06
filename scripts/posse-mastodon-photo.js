@@ -81,7 +81,7 @@ const main = async () => {
     console.dir(candidates);
 
     const photoToPosse =
-      candidates[Math.floor(Math.random() * candidates.length)];
+      candidates[Math.floor(Math.random() * candidates.length)].data;
     try {
       return createToot(photoToPosse);
     } catch (error) {
