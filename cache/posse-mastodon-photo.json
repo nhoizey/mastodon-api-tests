@@ -4211,7 +4211,9 @@
         "title": "Photo titled: Belgian Pride"
       }
     ],
-    "toots": []
+    "toots": [
+      "https://mastodon.hsablonniere.com/users/test1g6a1g8x/statuses/109469385193388466"
+    ]
   },
   "https://nicolas-hoizey.photo/galleries/travels/europe/united-kingdom/england/saint-pancras/": {
     "id": "https://nicolas-hoizey.photo/galleries/travels/europe/united-kingdom/england/saint-pancras/",
