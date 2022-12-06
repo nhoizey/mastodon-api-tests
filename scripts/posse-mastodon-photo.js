@@ -56,6 +56,7 @@ const main = async () => {
         // This is a new photo
         jsonCache[item.url] = item;
         jsonCache[item.url].toots = [];
+        cacheUpdated = true;
       }
     });
 
@@ -79,7 +80,10 @@ const main = async () => {
 
     try {
       const tootUrl = createToot(photoToPosse);
+      console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
       console.log(tootUrl);
+      console.log("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
+
       jsonCache[item.url].toots.push(tootUrl);
       jsonTimestamp.timestamp = Date.now();
       cacheUpdated = true;
@@ -101,6 +105,7 @@ const main = async () => {
     )
   );
   if (cacheUpdated) {
+    console.log("UPDATED!!!!!");
     fs.writeFileSync(CACHE_FILE, JSON.stringify(jsonCache, null, 2), {
       encoding: "utf8",
     });
