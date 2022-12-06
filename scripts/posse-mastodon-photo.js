@@ -79,6 +79,7 @@ const main = async () => {
 
     try {
       const tootUrl = createToot(photoToPosse);
+      console.log(tootUrl);
       jsonCache[item.url].toots.push(tootUrl);
       jsonTimestamp.timestamp = Date.now();
       cacheUpdated = true;
