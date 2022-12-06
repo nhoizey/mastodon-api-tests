@@ -48,13 +48,14 @@ const main = async () => {
   };
 
   const processFeed = async (feed) => {
-    let photos = feed.items;
+    let items = feed.items;
 
     // Fill cache with new items
-    photos.forEach((photo, index) => {
-      if (!jsonCache.hasOwnProperty(photo.url)) {
+    items.forEach((item, index) => {
+      if (!jsonCache.hasOwnProperty(item.url)) {
         // This is a new photo
-        jsonCache[photo.url] = { times: 0 };
+        jsonCache[item.url] = item;
+        jsonCache[item.url].toots = [];
       }
     });
 
@@ -62,25 +63,25 @@ const main = async () => {
     let minTimes = -1;
     const photosPerTimes = {};
     for (const photoUrl in jsonCache) {
-      const photoTimes = jsonCache[photoUrl].times;
+      const photoTimes = jsonCache[photoUrl].toots.length;
       minTimes = minTimes === -1 ? photoTimes : Math.min(minTimes, photoTimes);
       if (!photosPerTimes.hasOwnProperty(photoTimes)) {
         photosPerTimes[photoTimes] = [];
       }
-      photosPerTimes[photoTimes].push({
-        url: photoUrl,
-        data: jsonCache[photoUrl],
-      });
+      photosPerTimes[photoTimes].push(jsonCache[photoUrl]);
     }
     // Keep only recent photos that have been POSSEd the less
     const candidates = photosPerTimes[minTimes];
 
     const photoToPosse =
-      candidates[Math.floor(Math.random() * candidates.length)].data;
+      candidates[Math.floor(Math.random() * candidates.length)];
     console.dir(photoToPosse);
 
     try {
-      return createToot(photoToPosse);
+      const tootUrl = createToot(photoToPosse);
+      jsonCache[item.url].toots.push(tootUrl);
+      jsonTimestamp.timestamp = Date.now();
+      cacheUpdated = true;
     } catch (error) {
       return handleError(error);
     }
