@@ -89,7 +89,7 @@ const main = async () => {
 
   // TODO: use Promise.allSettled to continue even if one is rejected
   let result = await Promise.all(
-    ["https://nicolas-hoizey.photo/feeds/mastodon/photos-test.json"].map(
+    ["https://nicolas-hoizey.photo/feeds/mastodon/photos.json"].map(
       async (feedUrl) => {
         console.log(`Fetching ${feedUrl} …`);
         return fetch(feedUrl)
