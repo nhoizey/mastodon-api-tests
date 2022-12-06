@@ -72,16 +72,13 @@ const main = async () => {
         data: jsonCache[photoUrl],
       });
     }
-    console.log(minTimes);
-    console.dir(photosPerTimes);
-
     // Keep only recent photos that have been POSSEd the less
     const candidates = photosPerTimes[minTimes];
-    console.log("###############################");
-    console.dir(candidates);
 
     const photoToPosse =
       candidates[Math.floor(Math.random() * candidates.length)].data;
+    console.dir(photoToPosse);
+
     try {
       return createToot(photoToPosse);
     } catch (error) {
