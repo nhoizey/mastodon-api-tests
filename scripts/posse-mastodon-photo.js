@@ -13,12 +13,11 @@ const createToot = require("../lib/create-toot.js");
 
 // Cache of toots already sent
 const CACHE_FILE = "cache/posse-mastodon-photo.json";
-const jsonCache = require(path.join("..", CACHE_FILE)) || {};
+const jsonCache = require(path.join("..", CACHE_FILE));
 const TIMESTAMP_FILE = "cache/posse-mastodon-photo-timestamp.json";
-const jsonTimestamp = require(path.join("..", TIMESTAMP_FILE)) || {};
-let cacheUpdated = false;
+const jsonTimestamp = require(path.join("..", TIMESTAMP_FILE));
 
-const MINUTES_BETWEEN_PHOTOS = 10;
+const MINUTES_BETWEEN_PHOTOS = 1;
 
 const main = async () => {
   // Don't run this script more than every MINUTES_BETWEEN_PHOTOS minutes
@@ -26,7 +25,7 @@ const main = async () => {
     Date.now() <
     jsonTimestamp.timestamp + MINUTES_BETWEEN_PHOTOS * 60 * 1000
   ) {
-    return;
+    return status(200, "Too soon");
   }
 
   // Helper Function to return unknown errors
@@ -83,9 +82,7 @@ const main = async () => {
     try {
       const tootUrl = await createToot(photoToPosse);
 
-      console.log("###################################");
       console.log(tootUrl);
-      console.log("###################################");
 
       jsonCache[photoToPosse.url].toots.push(tootUrl);
       jsonTimestamp.timestamp = Date.now();
