@@ -5,7 +5,8 @@
   "main": "create-toot.js",
   "scripts": {
     "start": "node ./create-toot.js",
-    "posse-mastodon": "node ./scripts/posse-mastodon.js"
+    "posse-mastodon": "node ./scripts/posse-mastodon.js",
+    "posse-mastodon-photo": "node ./scripts/posse-mastodon-photo.js"
   },
   "repository": {
     "type": "git",

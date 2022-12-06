@@ -1,9 +1,9 @@
-name: POSSE to Mastodon
+name: POSSE photos to Mastodon
 on:
   schedule:
     # At every 7th minute from 1 through 59 past every hour
     # https://crontab.guru/#1/07_*_*_*_*
-    - cron: "1/07 * * * *"
+    - cron: "1/01 * * * *"
   workflow_dispatch:
 
 jobs:
@@ -23,12 +23,12 @@ jobs:
       - name: Install dependencies 📦
         run: npm ci
 
-      - name: POSSE to Mastodon 🦣
+      - name: POSSE photos to Mastodon 🦣
         env:
           MASTODON_ACCESS_TOKEN: ${{ secrets.MASTODON_ACCESS_TOKEN }}
           MASTODON_INSTANCE: ${{ secrets.MASTODON_INSTANCE }}
           RUNNER_TEMPORARY_DIRECTORY: ${{ runner.temp }}
-        run: npm run posse-mastodon >> $GITHUB_STEP_SUMMARY
+        run: npm run posse-mastodon-photo >> $GITHUB_STEP_SUMMARY
 
       - name: Pull any changes 📥
         run: git pull
