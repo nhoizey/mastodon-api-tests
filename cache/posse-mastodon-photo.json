@@ -1297,7 +1297,9 @@
         "title": "Photo titled: Not everyone is asleep yet"
       }
     ],
-    "toots": []
+    "toots": [
+      "https://mastodon.hsablonniere.com/users/test1g6a1g8x/statuses/109469358828090744"
+    ]
   },
   "https://nicolas-hoizey.photo/galleries/travels/europe/france/grand-est/marne/reims/north-collateral-of-the-cathedral-of-notre-dame-de-reims/": {
     "id": "https://nicolas-hoizey.photo/galleries/travels/europe/france/grand-est/marne/reims/north-collateral-of-the-cathedral-of-notre-dame-de-reims/",
