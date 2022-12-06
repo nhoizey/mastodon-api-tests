@@ -79,13 +79,13 @@ const main = async () => {
 
     const photoToPosse =
       candidates[Math.floor(Math.random() * candidates.length)];
-    console.dir(photoToPosse);
 
     try {
-      const tootUrl = createToot(photoToPosse);
-      console.log(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>");
+      const tootUrl = await createToot(photoToPosse);
+
+      console.log("###################################");
       console.log(tootUrl);
-      console.log("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<");
+      console.log("###################################");
 
       jsonCache[item.url].toots.push(tootUrl);
       jsonTimestamp.timestamp = Date.now();
@@ -107,7 +107,6 @@ const main = async () => {
     )
   );
 
-  console.log("UPDATE CACHE!!!!!");
   fs.writeFileSync(CACHE_FILE, JSON.stringify(jsonCache, null, 2), {
     encoding: "utf8",
   });
