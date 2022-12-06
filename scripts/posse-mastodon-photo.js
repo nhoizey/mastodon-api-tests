@@ -51,30 +51,34 @@ const main = async () => {
     let photos = feed.items;
 
     // Fill cache with new items
-    photos.forEach((item, index) => {
-      if (!jsonCache.hasOwnProperty(item.url)) {
+    photos.forEach((photo, index) => {
+      if (!jsonCache.hasOwnProperty(photo.url)) {
         // This is a new photo
-        jsonCache[item.url] = { times: 0 };
+        jsonCache[photo.url] = { times: 0 };
       }
     });
 
-    // Sort cache per number of toots
-    jsonCache.sort((a, b) => a.times - b.times);
-
-    console.dir(jsonCache);
+    // Get lowest number of toots for any photo
+    let minTimes = -1;
+    const photosPerTimes = {};
+    for (const photoUrl in jsonCache) {
+      const photoTimes = jsonCache[photoUrl].times;
+      minTimes = minTimes === -1 ? photoTimes : Math.min(minTimes, photoTimes);
+      if (!photosPerTimes.hasOwnProperty(photoTimes)) {
+        photosPerTimes[photoTimes] = [];
+      }
+      photosPerTimes[photoTimes].push({
+        url: photoUrl,
+        data: jsonCache[photoUrl],
+      });
+    }
+    console.log(minTimes);
+    console.dir(photosPerTimes);
 
     // Keep only recent photos that have been POSSEd the less
-    const minTimes = jsonCache[0].times;
-    const candidates = jsonCache.filter((item) => item.times === minTimes);
-
-    console.log("#####################################################");
+    const candidates = photosPerTimes[minTimes];
+    console.log("###############################");
     console.dir(candidates);
-
-    if (candidates.length === 0) {
-      // TODO: no need to return
-      console.error("This should never happen");
-      return status(200, "No item found to process.");
-    }
 
     const photoToPosse =
       candidates[Math.floor(Math.random() * candidates.length)];
