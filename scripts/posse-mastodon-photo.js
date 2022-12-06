@@ -87,7 +87,7 @@ const main = async () => {
       console.log(tootUrl);
       console.log("###################################");
 
-      jsonCache[item.url].toots.push(tootUrl);
+      jsonCache[photoToPosse.url].toots.push(tootUrl);
       jsonTimestamp.timestamp = Date.now();
     } catch (error) {
       return handleError(error);
