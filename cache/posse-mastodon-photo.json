@@ -29,7 +29,9 @@
         "title": "Photo titled: The arch from \"Once Upon A Time In The West\" in Texas Hollywood"
       }
     ],
-    "toots": []
+    "toots": [
+      "https://mastodon.hsablonniere.com/users/test1g6a1g8x/statuses/109473275466490731"
+    ]
   },
   "https://nicolas-hoizey.photo/galleries/travels/europe/spain/andalusia/the-plaza-de-toros-de-ronda/": {
     "id": "https://nicolas-hoizey.photo/galleries/travels/europe/spain/andalusia/the-plaza-de-toros-de-ronda/",
