@@ -1059,7 +1059,9 @@
         "title": "Photo titled: Bacchus dream"
       }
     ],
-    "toots": []
+    "toots": [
+      "https://mastodon.hsablonniere.com/users/test1g6a1g8x/statuses/109472143080765107"
+    ]
   },
   "https://nicolas-hoizey.photo/galleries/travels/europe/france/nouvelle-aquitaine/deux-sevres/niort/fog-over-niort/": {
     "id": "https://nicolas-hoizey.photo/galleries/travels/europe/france/nouvelle-aquitaine/deux-sevres/niort/fog-over-niort/",
