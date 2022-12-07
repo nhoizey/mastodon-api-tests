@@ -2519,7 +2519,9 @@
         "title": "Photo titled: Black Rhinoceros in Lake Nakuru National Park"
       }
     ],
-    "toots": []
+    "toots": [
+      "https://mastodon.hsablonniere.com/users/test1g6a1g8x/statuses/109473450848537280"
+    ]
   },
   "https://nicolas-hoizey.photo/galleries/animals/mammals/rhinoceros/staying-close/": {
     "id": "https://nicolas-hoizey.photo/galleries/animals/mammals/rhinoceros/staying-close/",
