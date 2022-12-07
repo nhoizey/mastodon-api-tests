@@ -1849,7 +1849,9 @@
         "title": "Photo titled: Along the shore"
       }
     ],
-    "toots": []
+    "toots": [
+      "https://mastodon.hsablonniere.com/users/test1g6a1g8x/statuses/109471973855843204"
+    ]
   },
   "https://nicolas-hoizey.photo/galleries/travels/europe/france/bretagne/finistere/guilvinec/le-guilvinec-by-night/": {
     "id": "https://nicolas-hoizey.photo/galleries/travels/europe/france/bretagne/finistere/guilvinec/le-guilvinec-by-night/",
