@@ -2077,7 +2077,9 @@
         "title": "Photo titled: Juvenile European Roller… in Africa"
       }
     ],
-    "toots": []
+    "toots": [
+      "https://mastodon.hsablonniere.com/users/test1g6a1g8x/statuses/109473429907831822"
+    ]
   },
   "https://nicolas-hoizey.photo/galleries/animals/birds/lappet-faced-vulture-in-maasai-mara-national-reserve/": {
     "id": "https://nicolas-hoizey.photo/galleries/animals/birds/lappet-faced-vulture-in-maasai-mara-national-reserve/",
