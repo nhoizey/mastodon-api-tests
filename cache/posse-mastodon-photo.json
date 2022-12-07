@@ -2949,7 +2949,9 @@
         "title": "Photo titled: Making fire"
       }
     ],
-    "toots": []
+    "toots": [
+      "https://mastodon.hsablonniere.com/users/test1g6a1g8x/statuses/109473241056642134"
+    ]
   },
   "https://nicolas-hoizey.photo/galleries/travels/africa/kenya/newborn-african-buffalo/": {
     "id": "https://nicolas-hoizey.photo/galleries/travels/africa/kenya/newborn-african-buffalo/",
