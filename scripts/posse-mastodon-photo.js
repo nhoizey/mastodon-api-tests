@@ -17,7 +17,7 @@ const jsonCache = require(path.join("..", CACHE_FILE));
 const TIMESTAMP_FILE = "cache/posse-mastodon-photo-timestamp.json";
 const jsonTimestamp = require(path.join("..", TIMESTAMP_FILE));
 
-const MINUTES_BETWEEN_PHOTOS = 1;
+const MINUTES_BETWEEN_PHOTOS = 60 * 23;
 
 const main = async () => {
   // Don't run this script more than every MINUTES_BETWEEN_PHOTOS minutes
