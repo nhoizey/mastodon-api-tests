@@ -2561,7 +2561,9 @@
         "title": "Photo titled: At the school of life"
       }
     ],
-    "toots": []
+    "toots": [
+      "https://mastodon.hsablonniere.com/users/test1g6a1g8x/statuses/109473214722164236"
+    ]
   },
   "https://nicolas-hoizey.photo/galleries/animals/mammals/zebras/grant-s-zebra/": {
     "id": "https://nicolas-hoizey.photo/galleries/animals/mammals/zebras/grant-s-zebra/",
