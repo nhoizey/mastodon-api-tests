@@ -3027,7 +3027,9 @@
         "title": "Photo titled: On the dirt track again"
       }
     ],
-    "toots": []
+    "toots": [
+      "https://mastodon.hsablonniere.com/users/test1g6a1g8x/statuses/109473505836160076"
+    ]
   },
   "https://nicolas-hoizey.photo/galleries/travels/africa/kenya/on-the-move/": {
     "id": "https://nicolas-hoizey.photo/galleries/travels/africa/kenya/on-the-move/",
