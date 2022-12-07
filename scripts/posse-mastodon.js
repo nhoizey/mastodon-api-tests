@@ -34,10 +34,11 @@ const TEMPORARY_DIRECTORY =
 const main = async () => {
   // Helper Function to return unknown errors
   const handleError = (error) => {
+    const code = Array.isArray(error) ? error[0].code : error.code;
     const msg = Array.isArray(error) ? error[0].message : error.message;
     process.exitCode = 1;
-    // TODO: no need to return
-    return status(422, String(msg));
+    // TODO: no need to return?
+    return status(code, String(msg));
   };
 
   // Helper Function to return function status

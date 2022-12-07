@@ -23,10 +23,11 @@ const MINUTES_BETWEEN_PHOTOS = 5; // 5 minutes
 const main = async () => {
   // Helper Function to return unknown errors
   const handleError = (error) => {
+    const code = Array.isArray(error) ? error[0].code : error.code;
     const msg = Array.isArray(error) ? error[0].message : error.message;
     process.exitCode = 1;
-    // TODO: no need to return
-    return status(422, String(msg));
+    // TODO: no need to return?
+    return status(code, String(msg));
   };
 
   // Helper Function to return function status
@@ -81,10 +82,10 @@ const main = async () => {
       candidates[Math.floor(Math.random() * candidates.length)];
 
     try {
+      console.log(`Trying to posting toot "${tootData.title}"`);
       const tootUrl = await createToot(photoToPosse);
-
-      console.log(tootUrl);
-      if (tootUrl.startsWith(process.env.MASTODON_INSTANCE)) {
+      if (tootUrl?.startsWith(process.env.MASTODON_INSTANCE)) {
+        console.log(`-> ${tootUrl}`);
         jsonCache[photoToPosse.url].toots.push(tootUrl);
         jsonTimestamp.timestamp = Date.now();
       }
