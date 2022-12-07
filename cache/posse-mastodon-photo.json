@@ -2279,7 +2279,9 @@
         "title": "Photo titled: Elephants grazing in Amboseli swamps"
       }
     ],
-    "toots": []
+    "toots": [
+      "https://mastodon.hsablonniere.com/users/test1g6a1g8x/statuses/109471925223675780"
+    ]
   },
   "https://nicolas-hoizey.photo/galleries/animals/mammals/elephants/morning-stroll/": {
     "id": "https://nicolas-hoizey.photo/galleries/animals/mammals/elephants/morning-stroll/",
