@@ -4039,7 +4039,9 @@
         "title": "Photo titled: Egret at sunset"
       }
     ],
-    "toots": []
+    "toots": [
+      "https://mastodon.hsablonniere.com/users/test1g6a1g8x/statuses/109472228940589788"
+    ]
   },
   "https://nicolas-hoizey.photo/galleries/animals/birds/long-tailed-broadbill/": {
     "id": "https://nicolas-hoizey.photo/galleries/animals/birds/long-tailed-broadbill/",
