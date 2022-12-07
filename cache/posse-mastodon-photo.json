@@ -559,7 +559,9 @@
         "title": "Photo titled: Old wooden house atmosphere"
       }
     ],
-    "toots": []
+    "toots": [
+      "https://mastodon.hsablonniere.com/users/test1g6a1g8x/statuses/109472207605262058"
+    ]
   },
   "https://nicolas-hoizey.photo/galleries/travels/europe/georgia/kaleidoscope-house/": {
     "id": "https://nicolas-hoizey.photo/galleries/travels/europe/georgia/kaleidoscope-house/",
