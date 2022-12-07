@@ -591,7 +591,9 @@
         "title": "Photo titled: Betlemi Street Stairs"
       }
     ],
-    "toots": []
+    "toots": [
+      "https://mastodon.hsablonniere.com/users/test1g6a1g8x/statuses/109471950865281411"
+    ]
   },
   "https://nicolas-hoizey.photo/galleries/travels/europe/georgia/gondola-lift-to-narikala-fortress/": {
     "id": "https://nicolas-hoizey.photo/galleries/travels/europe/georgia/gondola-lift-to-narikala-fortress/",
