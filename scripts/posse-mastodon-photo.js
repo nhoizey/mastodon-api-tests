@@ -17,17 +17,10 @@ const jsonCache = require(path.join("..", CACHE_FILE));
 const TIMESTAMP_FILE = "cache/posse-mastodon-photo-timestamp.json";
 const jsonTimestamp = require(path.join("..", TIMESTAMP_FILE));
 
-const MINUTES_BETWEEN_PHOTOS = 60 * 23; // 23 hours
+// const MINUTES_BETWEEN_PHOTOS = 60 * 23; // 23 hours
+const MINUTES_BETWEEN_PHOTOS = 5; // 5 minutes
 
 const main = async () => {
-  // Don't run this script more than every MINUTES_BETWEEN_PHOTOS minutes
-  if (
-    Date.now() <
-    jsonTimestamp.timestamp + MINUTES_BETWEEN_PHOTOS * 60 * 1000
-  ) {
-    return status(200, "Too soon");
-  }
-
   // Helper Function to return unknown errors
   const handleError = (error) => {
     const msg = Array.isArray(error) ? error[0].message : error.message;
@@ -45,6 +38,14 @@ const main = async () => {
       body: msg,
     };
   };
+
+  // Don't run this script more than every MINUTES_BETWEEN_PHOTOS minutes
+  if (
+    Date.now() <
+    jsonTimestamp.timestamp + MINUTES_BETWEEN_PHOTOS * 60 * 1000
+  ) {
+    return status(200, "Too soon");
+  }
 
   const processFeed = async (feed) => {
     let items = feed.items;
@@ -114,7 +115,7 @@ const main = async () => {
 
   // TODO: parse `result` to find potential errors and return accordingly
   // TODO: no need to return
-  return { statusCode: 200, body: JSON.stringify(result) };
+  // return { statusCode: 200, body: JSON.stringify(result) };
 };
 
 main();

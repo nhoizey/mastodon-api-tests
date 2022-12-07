@@ -3,7 +3,8 @@ on:
   schedule:
     # At every 17th minute from 1 through 59 past hour 7, 11, 15, 19, and 23 on every day-of-week from Monday through Friday
     # https://crontab.guru/#1/17_7,11,15,19,23_*_*_1-5
-    - cron: "1/17 7,11,15,19,23 * * 1-5"
+    # - cron: "1/17 7,11,15,19,23 * * 1-5"
+    - cron: "1/5 * * * *"
   workflow_dispatch:
 
 jobs:
