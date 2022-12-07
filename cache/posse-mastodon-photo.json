@@ -1253,7 +1253,9 @@
         "title": "Photo titled: Fontana di Trevi"
       }
     ],
-    "toots": []
+    "toots": [
+      "https://mastodon.hsablonniere.com/users/test1g6a1g8x/statuses/109472036162980593"
+    ]
   },
   "https://nicolas-hoizey.photo/galleries/travels/europe/italy/rome/il-colosseo/": {
     "id": "https://nicolas-hoizey.photo/galleries/travels/europe/italy/rome/il-colosseo/",
