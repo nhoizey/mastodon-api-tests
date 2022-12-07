@@ -3407,7 +3407,9 @@
         "title": "Photo titled: Liberty"
       }
     ],
-    "toots": []
+    "toots": [
+      "https://mastodon.hsablonniere.com/users/test1g6a1g8x/statuses/109473401389097717"
+    ]
   },
   "https://nicolas-hoizey.photo/galleries/travels/north-america/united-states/new-york/manhattan/the-city-that-never-sleeps/": {
     "id": "https://nicolas-hoizey.photo/galleries/travels/north-america/united-states/new-york/manhattan/the-city-that-never-sleeps/",
