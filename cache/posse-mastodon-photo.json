@@ -2381,7 +2381,9 @@
         "title": "Photo titled: A nap in the shade"
       }
     ],
-    "toots": []
+    "toots": [
+      "https://mastodon.hsablonniere.com/users/test1g6a1g8x/statuses/109473047089268559"
+    ]
   },
   "https://nicolas-hoizey.photo/galleries/animals/mammals/lions/don-t-be-afraid-i-m-just-yawning/": {
     "id": "https://nicolas-hoizey.photo/galleries/animals/mammals/lions/don-t-be-afraid-i-m-just-yawning/",
