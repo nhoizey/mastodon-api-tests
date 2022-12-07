@@ -1801,7 +1801,9 @@
         "title": "Photo titled: Ploumanac'h (B&W)"
       }
     ],
-    "toots": []
+    "toots": [
+      "https://mastodon.hsablonniere.com/users/test1g6a1g8x/statuses/109473475286860841"
+    ]
   },
   "https://nicolas-hoizey.photo/galleries/travels/europe/france/bretagne/cotes-d-armor/ploumanac-h/ploumanac-h-lighthouse/": {
     "id": "https://nicolas-hoizey.photo/galleries/travels/europe/france/bretagne/cotes-d-armor/ploumanac-h/ploumanac-h-lighthouse/",
