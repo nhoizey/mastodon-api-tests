@@ -1333,7 +1333,9 @@
         "title": "Photo titled: Le Roof"
       }
     ],
-    "toots": []
+    "toots": [
+      "https://mastodon.hsablonniere.com/users/test1g6a1g8x/statuses/109471890897280807"
+    ]
   },
   "https://nicolas-hoizey.photo/galleries/misc/miniature/a-l-epee-royale/": {
     "id": "https://nicolas-hoizey.photo/galleries/misc/miniature/a-l-epee-royale/",
