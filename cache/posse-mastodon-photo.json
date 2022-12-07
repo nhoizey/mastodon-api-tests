@@ -2935,7 +2935,9 @@
         "title": "Photo titled: Majestic Kilimanjaro"
       }
     ],
-    "toots": []
+    "toots": [
+      "https://mastodon.hsablonniere.com/users/test1g6a1g8x/statuses/109473319514151167"
+    ]
   },
   "https://nicolas-hoizey.photo/galleries/travels/africa/kenya/making-fire/": {
     "id": "https://nicolas-hoizey.photo/galleries/travels/africa/kenya/making-fire/",
