@@ -17,7 +17,7 @@ const jsonCache = require(path.join("..", CACHE_FILE));
 const TIMESTAMP_FILE = "cache/posse-mastodon-photo-timestamp.json";
 const jsonTimestamp = require(path.join("..", TIMESTAMP_FILE));
 
-const MINUTES_BETWEEN_PHOTOS = 60 * 23;
+const MINUTES_BETWEEN_PHOTOS = 60 * 23; // 23 hours
 
 const main = async () => {
   // Don't run this script more than every MINUTES_BETWEEN_PHOTOS minutes
@@ -83,9 +83,10 @@ const main = async () => {
       const tootUrl = await createToot(photoToPosse);
 
       console.log(tootUrl);
-
-      jsonCache[photoToPosse.url].toots.push(tootUrl);
-      jsonTimestamp.timestamp = Date.now();
+      if (tootUrl.startsWith(process.env.MASTODON_INSTANCE)) {
+        jsonCache[photoToPosse.url].toots.push(tootUrl);
+        jsonTimestamp.timestamp = Date.now();
+      }
     } catch (error) {
       return handleError(error);
     }
