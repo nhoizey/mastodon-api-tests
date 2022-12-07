@@ -709,7 +709,9 @@
         "title": "Photo titled: Biohazard"
       }
     ],
-    "toots": []
+    "toots": [
+      "https://mastodon.hsablonniere.com/users/test1g6a1g8x/statuses/109472924457003664"
+    ]
   },
   "https://nicolas-hoizey.photo/galleries/travels/africa/kenya/diani-beach/": {
     "id": "https://nicolas-hoizey.photo/galleries/travels/africa/kenya/diani-beach/",
