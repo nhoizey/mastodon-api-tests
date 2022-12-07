@@ -3421,7 +3421,9 @@
         "title": "Photo titled: Tubes"
       }
     ],
-    "toots": []
+    "toots": [
+      "https://mastodon.hsablonniere.com/users/test1g6a1g8x/statuses/109472904567804498"
+    ]
   },
   "https://nicolas-hoizey.photo/galleries/animals/birds/coco/": {
     "id": "https://nicolas-hoizey.photo/galleries/animals/birds/coco/",
