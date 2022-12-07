@@ -2101,7 +2101,9 @@
         "title": "Photo titled: Lappet-faced vulture on a tree in Maasai Mara National Reserve"
       }
     ],
-    "toots": []
+    "toots": [
+      "https://mastodon.hsablonniere.com/users/test1g6a1g8x/statuses/109472862223282217"
+    ]
   },
   "https://nicolas-hoizey.photo/galleries/animals/birds/lesser-blue-eared-starling/": {
     "id": "https://nicolas-hoizey.photo/galleries/animals/birds/lesser-blue-eared-starling/",
