@@ -82,7 +82,7 @@ const main = async () => {
       candidates[Math.floor(Math.random() * candidates.length)];
 
     try {
-      console.log(`Trying to posting toot "${tootData.title}"`);
+      console.log(`Trying to posting toot "${photoToPosse.title}"`);
       const tootUrl = await createToot(photoToPosse);
       if (tootUrl?.startsWith(process.env.MASTODON_INSTANCE)) {
         console.log(`-> ${tootUrl}`);
@@ -95,7 +95,7 @@ const main = async () => {
   };
 
   // TODO: use Promise.allSettled to continue even if one is rejected
-  let result = await Promise.all(
+  await Promise.all(
     ["https://nicolas-hoizey.photo/feeds/mastodon/photos.json"].map(
       async (feedUrl) => {
         console.log(`Fetching ${feedUrl} …`);
@@ -113,10 +113,6 @@ const main = async () => {
   fs.writeFileSync(TIMESTAMP_FILE, JSON.stringify(jsonTimestamp, null, 2), {
     encoding: "utf8",
   });
-
-  // TODO: parse `result` to find potential errors and return accordingly
-  // TODO: no need to return
-  // return { statusCode: 200, body: JSON.stringify(result) };
 };
 
 main();
