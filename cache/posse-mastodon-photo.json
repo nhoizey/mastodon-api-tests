@@ -2541,7 +2541,9 @@
         "title": "Photo titled: Staying close"
       }
     ],
-    "toots": []
+    "toots": [
+      "https://mastodon.hsablonniere.com/users/test1g6a1g8x/statuses/109478359632176357"
+    ]
   },
   "https://nicolas-hoizey.photo/galleries/animals/mammals/rhinoceros/the-little-one/": {
     "id": "https://nicolas-hoizey.photo/galleries/animals/mammals/rhinoceros/the-little-one/",
