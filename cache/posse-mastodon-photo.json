@@ -63,7 +63,9 @@
         "title": "Photo titled: The walls of the Alcazar of Seville"
       }
     ],
-    "toots": []
+    "toots": [
+      "https://mastodon.hsablonniere.com/users/test1g6a1g8x/statuses/109478337637339707"
+    ]
   },
   "https://nicolas-hoizey.photo/galleries/travels/europe/spain/basque-country/summer-vibes-in-mundaka/": {
     "id": "https://nicolas-hoizey.photo/galleries/travels/europe/spain/basque-country/summer-vibes-in-mundaka/",
