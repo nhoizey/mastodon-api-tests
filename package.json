@@ -3,11 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "create-toot.js",
-  "scripts": {
-    "start": "node ./create-toot.js",
-    "posse-mastodon": "node ./scripts/posse-mastodon.js",
-    "posse-mastodon-photo": "node ./scripts/posse-mastodon-photo.js"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nhoizey/mastodon-api-tests.git"
