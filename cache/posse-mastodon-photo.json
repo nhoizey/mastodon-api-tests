@@ -2507,7 +2507,9 @@
         "title": "Photo titled: Young olive baboon at sunset"
       }
     ],
-    "toots": []
+    "toots": [
+      "https://mastodon.hsablonniere.com/users/test1g6a1g8x/statuses/109478381588536826"
+    ]
   },
   "https://nicolas-hoizey.photo/galleries/animals/mammals/rhinoceros/black-rhinoceros-in-lake-nakuru-national-park/": {
     "id": "https://nicolas-hoizey.photo/galleries/animals/mammals/rhinoceros/black-rhinoceros-in-lake-nakuru-national-park/",
