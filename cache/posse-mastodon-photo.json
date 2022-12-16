@@ -3019,7 +3019,9 @@
         "title": "Photo titled: Now you see me"
       }
     ],
-    "toots": []
+    "toots": [
+      "https://mastodon.hsablonniere.com/users/test1g6a1g8x/statuses/109523208689898751"
+    ]
   },
   "https://nicolas-hoizey.photo/galleries/travels/africa/kenya/on-the-dirt-track-again/": {
     "id": "https://nicolas-hoizey.photo/galleries/travels/africa/kenya/on-the-dirt-track-again/",
