@@ -49,7 +49,10 @@
         "title": "Photo titled: The Plaza de Toros de Ronda"
       }
     ],
-    "toots": []
+    "toots": [
+      "https://mastodon.hsablonniere.com/users/test1g6a1g8x/statuses/109597107704093910"
+    ],
+    "lastTootTimestamp": 1672319148474
   },
   "https://nicolas-hoizey.photo/galleries/travels/europe/spain/andalusia/the-walls-of-the-alcazar-of-seville/": {
     "id": "https://nicolas-hoizey.photo/galleries/travels/europe/spain/andalusia/the-walls-of-the-alcazar-of-seville/",
