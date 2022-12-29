@@ -60,6 +60,9 @@ const main = async () => {
       // Fill cache with new items
       // TODO: remove items from cache that are not anymore in the feed
       if (jsonCache.hasOwnProperty(item.url)) {
+        if (jsonCache[item.url].toots === undefined) {
+          console.log(item.url);
+        }
         const existingToots = [...jsonCache[item.url].toots];
         let lastTootTimestamp = jsonCache[item.url].lastTootTimestamp;
         // Initialize lastTootTimestamp for photos already with some toots
