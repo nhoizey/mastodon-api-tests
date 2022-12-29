@@ -110,7 +110,7 @@ const main = async () => {
       candidates[Math.floor(Math.random() * candidates.length)];
 
     try {
-      console.log(`Trying to posting toot "${photoToPosse.title}"`);
+      console.log(`Trying to post toot "${photoToPosse.title}"`);
       const tootUrl = await createToot(photoToPosse);
       if (tootUrl?.startsWith(process.env.MASTODON_INSTANCE)) {
         console.log(`-> ${tootUrl}`);
@@ -126,7 +126,7 @@ const main = async () => {
   // Manage multiple feeds
   // TODO: use Promise.allSettled to continue even if one is rejected
   await Promise.all(
-    ["https://nicolas-hoizey.photo/feeds/mastodon/photos-test.json"].map(
+    ["https://nicolas-hoizey.photo/feeds/mastodon/photos.json"].map(
       async (feedUrl) => {
         console.log(`Fetching ${feedUrl} …`);
         return fetch(feedUrl)
