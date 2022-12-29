@@ -15,7 +15,8 @@
     ],
     "toots": [
       "https://mastodon.hsablonniere.com/users/test1g6a1g8x/statuses/109522424133364295"
-    ]
+    ],
+    "lastTootTimestamp": 1672319380934
   },
   "https://nicolas-hoizey.photo/galleries/travels/europe/spain/andalusia/the-arch-from-once-upon-a-time-in-the-west-in-texas-hollywood/": {
     "id": "https://nicolas-hoizey.photo/galleries/travels/europe/spain/andalusia/the-arch-from-once-upon-a-time-in-the-west-in-texas-hollywood/",
@@ -33,7 +34,8 @@
     ],
     "toots": [
       "https://mastodon.hsablonniere.com/users/test1g6a1g8x/statuses/109473275466490731"
-    ]
+    ],
+    "lastTootTimestamp": 1672319380934
   },
   "https://nicolas-hoizey.photo/galleries/travels/europe/spain/andalusia/the-plaza-de-toros-de-ronda/": {
     "id": "https://nicolas-hoizey.photo/galleries/travels/europe/spain/andalusia/the-plaza-de-toros-de-ronda/",
@@ -69,8 +71,10 @@
       }
     ],
     "toots": [
-      "https://mastodon.hsablonniere.com/users/test1g6a1g8x/statuses/109478337637339707"
-    ]
+      "https://mastodon.hsablonniere.com/users/test1g6a1g8x/statuses/109478337637339707",
+      "https://mastodon.hsablonniere.com/users/test1g6a1g8x/statuses/109597123310944063"
+    ],
+    "lastTootTimestamp": 1672319386606
   },
   "https://nicolas-hoizey.photo/galleries/travels/europe/spain/basque-country/summer-vibes-in-mundaka/": {
     "id": "https://nicolas-hoizey.photo/galleries/travels/europe/spain/basque-country/summer-vibes-in-mundaka/",
