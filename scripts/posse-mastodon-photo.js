@@ -60,9 +60,6 @@ const main = async () => {
       // Fill cache with new items
       // TODO: remove items from cache that are not anymore in the feed
       if (jsonCache.hasOwnProperty(item.url)) {
-        if (jsonCache[item.url].toots === undefined) {
-          console.log(item.url);
-        }
         const existingToots = [...jsonCache[item.url].toots];
         let lastTootTimestamp = jsonCache[item.url].lastTootTimestamp;
         // Initialize lastTootTimestamp for photos already with some toots
@@ -90,6 +87,10 @@ const main = async () => {
       }
     });
 
+    if (Object.keys(photosNotTootedRecently).length === 0) {
+      return status(200, "No photo to toot");
+    }
+
     // Get lowest number of toots for any photo
     let minTimes = -1;
     const photosPerTimes = {};
@@ -101,6 +102,7 @@ const main = async () => {
       }
       photosPerTimes[photoTimes].push(photosNotTootedRecently[photoUrl]);
     }
+
     // Keep only recent photos that have been POSSEd the less
     const candidates = photosPerTimes[minTimes];
 
