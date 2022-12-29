@@ -63,7 +63,7 @@ const main = async () => {
         const existingToots = [...jsonCache[item.url].toots];
         let lastTootTimestamp = jsonCache[item.url].lastTootTimestamp;
         // Initialize lastTootTimestamp for photos already with some toots
-        if (lastTootTimestamp === undefined && existingToots.length > 0) {
+        if (lastTootTimestamp === undefined && existingToots?.length > 0) {
           lastTootTimestamp = Date.now();
         }
         // Update item content
