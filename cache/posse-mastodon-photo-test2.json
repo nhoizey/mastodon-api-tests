@@ -379,7 +379,10 @@
         "_alt_text": "Photo of a cowboy on horseback in the dirt street of a wild west town (photo taken in a movie studio)"
       }
     ],
-    "toots": []
+    "toots": [
+      "https://mastodon.hsablonniere.com/users/test1g6a1g8x/statuses/111222715532469109"
+    ],
+    "lastTootTimestamp": 1697123955499
   },
   "https://nicolas-hoizey.photo/galleries/travels/europe/spain/andalusia/the-arch-from-once-upon-a-time-in-the-west-in-texas-hollywood/": {
     "id": "https://nicolas-hoizey.photo/galleries/travels/europe/spain/andalusia/the-arch-from-once-upon-a-time-in-the-west-in-texas-hollywood/",
