@@ -1854,7 +1854,10 @@
         "title": "Colorful edges"
       }
     ],
-    "toots": []
+    "toots": [
+      "https://mastodon.hsablonniere.com/users/test1g6a1g8x/statuses/111222636330711707"
+    ],
+    "lastTootTimestamp": 1697122746852
   },
   "https://nicolas-hoizey.photo/galleries/misc/still-life/ripe/": {
     "id": "https://nicolas-hoizey.photo/galleries/misc/still-life/ripe/",
