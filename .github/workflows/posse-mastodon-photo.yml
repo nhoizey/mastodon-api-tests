@@ -15,7 +15,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: POSSE photos to Mastodon 🦣
-        uses: nhoizey/github-action-jsonfeed-to-mastodon@v2.0.0-alpha.4
+        uses: nhoizey/github-action-jsonfeed-to-mastodon@v2.0.0-alpha.5
         with:
           feedUrl: "https://nicolas-hoizey.photo/feeds/mastodon/photos-test.json"
           mastodonInstance: ${{ secrets.MASTODON_INSTANCE }}
