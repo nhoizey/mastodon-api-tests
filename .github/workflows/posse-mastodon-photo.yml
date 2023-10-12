@@ -20,9 +20,11 @@ jobs:
           feedUrl: "https://nicolas-hoizey.photo/feeds/mastodon/photos-test.json"
           mastodonInstance: ${{ secrets.MASTODON_INSTANCE }}
           mastodonToken: ${{ secrets.MASTODON_ACCESS_TOKEN }}
-          cacheFile: "posse-mastodon-photo-test.json"
-          cacheTimestampFile: "posse-mastodon-photo-timestamp-test.json"
-          globalDelayToots: 1 # 1 hour
+          cacheFile: "posse-mastodon-photo-test2.json"
+          cacheTimestampFile: "posse-mastodon-photo-timestamp-test2.json"
+          globalDelayToots: 1 # 1 minute
+          ignoreFirstRun: false
+          nbTootsPerItem: 1000
 
       - name: Pull any changes from Git 📥
         run: git pull
