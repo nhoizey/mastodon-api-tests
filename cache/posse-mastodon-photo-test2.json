@@ -3821,7 +3821,10 @@
         "title": "Different means of locomotion"
       }
     ],
-    "toots": []
+    "toots": [
+      "https://mastodon.hsablonniere.com/users/test1g6a1g8x/statuses/111222567112982024"
+    ],
+    "lastTootTimestamp": 1697121690670
   },
   "https://nicolas-hoizey.photo/galleries/travels/africa/egypt/eastern-desert/itbay/": {
     "id": "https://nicolas-hoizey.photo/galleries/travels/africa/egypt/eastern-desert/itbay/",
